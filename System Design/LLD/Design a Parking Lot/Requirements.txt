@@ -1,0 +1,66 @@
+Requirements:-
+
+1. what type of vehicles should support?
+   bikers, cars, trucks...
+2. can a slot accomodate any vehile?
+   no
+3.Price Calculations
+   Should suport multiple pricing strategies
+    1. Time based (peak/non-peak)
+    2. Event based (concerts, sports...)
+4.Should support multiple payment methods
+   1. cash
+   2. card
+   3. upi
+5. No of floors and parking slots on each floor
+   should allow to configure the number of floors and parking slots on each floor
+   each slot should mapped to a vehicle type
+6. How many gates should be there?
+   multiple entry and exit gates should be supported
+7. Are we going to develope this for multiple locations?
+   no, we are going to develope this for a single location
+
+
+Vehicle - abstract class
+    - car 
+    - bike
+    - truck
+Vehicle Type - enum
+    - car
+    - bike
+    - truck
+Parking Slot - Class
+    - slot number
+    - vehicle type
+    - is occupied 
+
+For pricing
+    enum  - PricingStrategyEnum
+        - TimeBased
+        - EventBased
+    PricingStrategy - interface
+        - TimeBasedPricing
+        - EventBasedPricing
+For payment
+    enum - PaymentMethodEnum
+        - Cash
+        - Card
+        - Upi
+    PaymentStrategy - interface
+        - CashPayment
+        - CardPayment
+        - UpiPayment
+
+Floor - class
+    - floor number
+    - list of parking slots
+
+Gates - enum
+    - entry gate
+    - exit gate
+Ticket - class
+    - ticket number
+    - vehicle type
+    - entry time
+    - exit time
+    - price
