@@ -1,7 +1,7 @@
 package org.example.singleton;
 
 public class MultiThreadSingleton {
-    private static MultiThreadSingleton instance=null;
+    private static volatile MultiThreadSingleton instance=null;
     private MultiThreadSingleton(){}
     public static MultiThreadSingleton getInstance(){
         if(instance==null){
