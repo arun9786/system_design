@@ -1,4 +1,4 @@
-package org.example.factory;
+package org.example.factory.with;
 
 public class Vehiclefactory {
     public Vehicle getVehicle(String type) {

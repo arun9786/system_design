@@ -1,8 +1,8 @@
-package org.example.factory;
+package org.example.factory.with;
 
 import java.util.logging.Logger;
 
-public class FactoryMain {
+public class Main {
 
     public static void main(String[] args) {
         Vehiclefactory vehiclefactory = new Vehiclefactory();
@@ -13,6 +13,5 @@ public class FactoryMain {
         Vehicle bike = vehiclefactory.getVehicle("Bike");
         bike.drive();
 
-        Logger logger = Logger.getLogger(FactoryMain.class.getName());
     }
 }
