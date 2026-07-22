@@ -3,19 +3,20 @@ package model;
 import enums.VehicleType;
 
 public abstract class Vehicle {
-    private final String number;
-    private final VehicleType vehicleType;
 
-    public Vehicle(String number, VehicleType vehicleType) {
-        this.number = number;
+    protected String vehicleNumber;
+    protected VehicleType vehicleType;
+
+    public Vehicle(String vehicleNumber, VehicleType vehicleType) {
+        this.vehicleNumber = vehicleNumber;
         this.vehicleType = vehicleType;
-    }
-
-    public String getNumber() {
-        return number;
     }
 
     public VehicleType getVehicleType() {
         return vehicleType;
+    }
+
+    public String getVehicleNumber() {
+        return vehicleNumber;
     }
 }

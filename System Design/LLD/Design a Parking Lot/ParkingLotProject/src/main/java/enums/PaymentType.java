@@ -1,6 +1,6 @@
 package enums;
 
-public enum PaymentMode {
+public enum PaymentType {
     CASH,
     CARD,
     UPI
